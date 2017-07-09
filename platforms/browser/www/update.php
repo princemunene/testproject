@@ -8,8 +8,8 @@
  $price=$_POST['price'];
  $q=mysqli_query($con,"UPDATE `course_details` SET `title`='$title',`duration`='$duration',`price`='$price' where `id`='$id'");
  if($q)
- echo "success";
+ echo 1;
  else
- echo "error";
+ echo 0;
  }
  ?>

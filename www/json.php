@@ -1,4 +1,4 @@
-<?php
+<?php 
 include "db.php";
 $data=array();
 $q=mysqli_query($con,"select * from `course_details`");

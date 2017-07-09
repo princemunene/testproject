@@ -22,7 +22,7 @@
             var dataString = "id=" + id + "&title=" + title + "&duration=" + duration + "&price=" + price + "&update=";
             $.ajax({
                 type: "POST",
-                url: "http://192.168.179.200/phonetest/www/update.php",
+                url: "http://qet.co.ke/phonetest/update.php",
                 data: dataString,
                 crossDomain: true,
                 cache: false,
@@ -30,10 +30,10 @@
                     $("#update").val('Connecting...');
                 },
                 success: function(data) {
-                    if (data == "success") {
+                     if (data==1) {
                         alert("Updated");
                         $("#update").val("Update");
-                    } else if (data == "error") {
+                    } else if (data == 0) {
                         alert("error");
                     }
                 }
@@ -45,7 +45,7 @@
             var dataString = "id=" + id + "&delete=";
             $.ajax({
                 type: "GET",
-                 url: "http://192.168.179.200/phonetest/www/delete.php",
+                 url: "http://qet.co.ke/phonetest/delete.php",
                 data: dataString,
                 crossDomain: true,
                 cache: false,
